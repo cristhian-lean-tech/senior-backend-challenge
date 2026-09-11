@@ -1,0 +1,40 @@
+image: gitpod/workspace-node:latest
+
+tasks:
+  - name: Challenge
+    init: |
+      npm install
+    command: |
+      echo ""
+      echo "======================================================"
+      echo " Senior Backend Challenge - Checkout Refactoring"
+      echo "======================================================"
+      echo " Read README.md before writing code."
+      echo ""
+      echo " npm test        -> acceptance suite (must stay green)"
+      echo " npm run dev     -> start the API on port 3000"
+      echo " npm run typecheck"
+      echo "======================================================"
+      echo ""
+      npm test
+      npm run dev
+
+ports:
+  - port: 3000
+    name: Checkout API
+    onOpen: notify
+    visibility: public
+  - port: 4010
+    name: Acceptance test server
+    onOpen: ignore
+
+vscode:
+  extensions:
+    - esbenp.prettier-vscode
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    addComment: false

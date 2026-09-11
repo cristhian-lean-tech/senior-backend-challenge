@@ -1,0 +1,47 @@
+### Health check
+GET http://localhost:3000/
+
+### Checkout without discount -> 250
+POST http://localhost:3000/api/checkout
+Content-Type: application/json
+
+{
+  "products": [
+    { "id": "prod-1", "price": 100, "requestedQuantity": 2 },
+    { "id": "prod-2", "price": 50, "requestedQuantity": 1 }
+  ]
+}
+
+### Checkout with a percentage discount -> 225
+POST http://localhost:3000/api/checkout
+Content-Type: application/json
+
+{
+  "products": [
+    { "id": "prod-1", "price": 100, "requestedQuantity": 2 },
+    { "id": "prod-2", "price": 50, "requestedQuantity": 1 }
+  ],
+  "discountCode": "10PERCENT"
+}
+
+### Checkout with a flat discount -> 240
+POST http://localhost:3000/api/checkout
+Content-Type: application/json
+
+{
+  "products": [
+    { "id": "prod-1", "price": 100, "requestedQuantity": 2 },
+    { "id": "prod-2", "price": 50, "requestedQuantity": 1 }
+  ],
+  "discountCode": "MINUS10"
+}
+
+### Insufficient stock -> 400
+POST http://localhost:3000/api/checkout
+Content-Type: application/json
+
+{
+  "products": [
+    { "id": "prod-3", "price": 10, "requestedQuantity": 1 }
+  ]
+}
