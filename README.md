@@ -125,7 +125,7 @@ See [`requests.http`](./requests.http) for ready-to-run examples.
 
 ## Deliverable
 
-1. Fork this repository (or create a repository from it).
+1. Click **Use this template** on GitHub (or fork this repository) to create your own copy.
 2. Work on a branch, committing in meaningful steps — we read the history.
 3. Add a `DECISIONS.md` at the root explaining:
    - the architecture you chose and **why**,

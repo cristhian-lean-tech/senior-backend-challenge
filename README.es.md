@@ -127,7 +127,7 @@ Mirá [`requests.http`](./requests.http) para ejemplos listos para ejecutar.
 
 ## Entrega
 
-1. Hacé un fork de este repositorio (o creá un repositorio a partir de él).
+1. Usá el botón **Use this template** en GitHub (o hacé un fork) para crear tu propia copia.
 2. Trabajá en una rama, con commits que cuenten una historia: leemos el historial.
 3. Agregá un `DECISIONS.md` en la raíz explicando:
    - qué arquitectura elegiste y **por qué**,
