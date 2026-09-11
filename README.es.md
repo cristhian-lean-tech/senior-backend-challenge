@@ -2,7 +2,7 @@
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/cristhian-lean-tech/senior-backend-challenge)
 
-> 🇬🇧 English: [README.md](./README.md)
+> 🌐 [English](./README.md) · **Español** · [Português](./README.pt.md)
 
 **Stack:** Node.js · Express · TypeScript
 **Tiempo estimado:** 2–3 horas
